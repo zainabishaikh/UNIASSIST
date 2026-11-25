@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniAssist — University Admissions & Student Helpdesk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-header">
+        <div class="brand-logo" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 6.5V12.5C3 17.8 6.84 22.66 12 24C17.16 22.66 21 17.8 21 12.5V6.5L12 2Z" fill="url(#shieldGrad)"/>
+            <path d="M8.5 12.5L10.8 14.8L15.8 9.8" stroke="#0B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="shieldGrad" x1="3" y1="2" x2="21" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#F7C95C"/>
+                <stop offset="1" stop-color="#D99B26"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">UniAssist</div>
+          <div class="brand-subtitle">Admissions & Student Desk</div>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <div class="nav-section-label">Student & Applicant Portal</div>
+        <button class="nav-item active" data-view="helpdesk">
+          <span class="nav-icon">💬</span>
+          <span>Virtual Helpdesk</span>
+        </button>
+        <button class="nav-item" data-view="estimator">
+          <span class="nav-icon">🧮</span>
+          <span>Eligibility & Fee Estimator</span>
+        </button>
+        <button class="nav-item" data-view="corpus">
+          <span class="nav-icon">📖</span>
+          <span>University Policies</span>
+        </button>
+
+        <!-- Admin-Only Navigation Section (Hidden from Students) -->
+        <div class="admin-only hidden" id="adminNavGroup">
+          <div class="nav-section-label" style="margin-top:14px;">Staff & Admin Console</div>
+          <button class="nav-item" data-view="tickets">
+            <span class="nav-icon">🎫</span>
+            <span>Escalation Tickets</span>
+            <span class="nav-badge" id="openTicketBadge">0</span>
+          </button>
+          <button class="nav-item" data-view="benchmark">
+            <span class="nav-icon">📊</span>
+            <span>Benchmark & Diagnostics</span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <!-- Admin-Only Pipeline Telemetry -->
+        <div class="telemetry-card admin-only hidden" id="adminTelemetryCard">
+          <div class="telemetry-title">RAG Pipeline Telemetry</div>
+          <div class="telemetry-row">
+            <span>Indexed Policies</span>
+            <strong id="statSections">--</strong>
+          </div>
+          <div class="telemetry-row">
+            <span>Confidence Gate (τ)</span>
+            <strong>0.15</strong>
+          </div>
+          <div class="telemetry-row">
+            <span>Role Alignment Boost</span>
+            <strong>1.15×</strong>
+          </div>
+          <div class="telemetry-row">
+            <span>Startup Index Time</span>
+            <strong id="statIndexMs">-- ms</strong>
+          </div>
+        </div>
+
+        <button type="button" class="staff-access-btn" id="staffAccessBtn">
+          <span id="staffAccessIcon">🔒</span>
+          <span id="staffAccessText">Staff / Admin Login</span>
+        </button>
+
+        <div class="author-chip">
+          <div class="author-name">Dayananda Sagar University</div>
+          <div class="author-meta">Official Policy-Verified Student Desk</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="main-area">
+      <!-- Top Control Bar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">☰</button>
+          <div>
+            <h1 class="page-title" id="pageTitle">Virtual Helpdesk</h1>
+            <p class="page-subtitle" id="pageSubtitle">Official answers verified against university admissions, fee, hostel & examination circulars</p>
+          </div>
+        </div>
+
+        <div class="topbar-controls">
+          <!-- Dual Stakeholder Role Switch -->
+          <div class="role-switch" role="group" aria-label="Stakeholder Role Mode">
+            <button class="role-btn active" id="roleApplicantBtn" data-role="applicant">
+              🎓 Prospective Applicant
+            </button>
+            <button class="role-btn" id="roleStudentBtn" data-role="student">
+              🪪 Enrolled Student
+            </button>
+          </div>
+
+          <!-- Admin-Only Controls -->
+          <div class="admin-controls admin-only hidden" id="adminTopControls">
+            <label class="offline-toggle" title="Simulate campus Wi-Fi outage / offline kiosk mode (<10ms)">
+              <input type="checkbox" id="offlineToggle" />
+              <span class="toggle-track"></span>
+              <span class="toggle-label" id="offlineStatusLabel">Auto (Cloud + Failover)</span>
+            </label>
+
+            <button class="btn-outline btn-sm" id="openApiModalBtn" title="Configure optional Google Gemini Flash API key">
+              🔑 <span id="apiKeyStatusText">Gemini Key</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Views -->
+      <main class="content-viewport">
+        <!-- VIEW 1: VIRTUAL HELPDESK -->
+        <section class="view active" id="view-helpdesk">
+          <div class="helpdesk-layout">
+            <div class="chat-panel">
+              <div class="quick-chips-bar">
+                <span class="chips-label" id="chipsRoleLabel">Popular Questions:</span>
+                <div class="chips-scroll" id="quickChipsContainer"></div>
+              </div>
+
+              <div class="chat-messages" id="chatMessages">
+                <div class="welcome-banner">
+                  <div class="welcome-badge">Official University Information Desk</div>
+                  <h2>How can UniAssist help you today?</h2>
+                  <p>
+                    Ask about program eligibility, entrance exams, tuition & hostel fee structures, merit scholarships,
+                    admission documents, attendance rules, or exam schedules. Every answer links directly to the official
+                    university circular for complete accuracy.
+                  </p>
+                  <div class="welcome-pillars">
+                    <div class="pillar"><span>🎓</span><div><strong>Admissions & Eligibility</strong><small>MCA, MBA, B.Tech, BCA & B.Sc. norms</small></div></div>
+                    <div class="pillar"><span>💰</span><div><strong>Fees & Scholarships</strong><small>Quota tuition, hostel & merit waivers</small></div></div>
+                    <div class="pillar"><span>📄</span><div><strong>Verified Circular Refs</strong><small>Click any reference tag to read the policy</small></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <form class="chat-composer" id="chatForm">
+                <div class="composer-role-pill" id="composerRolePill">Viewing as: Applicant</div>
+                <input
+                  type="text"
+                  id="chatInput"
+                  placeholder="Ask a question (e.g., 'Am I eligible for MCA with 58% in BCA and no Math in Class 12?')..."
+                  autocomplete="off"
+                />
+                <button type="button" class="btn-ghost" id="clearChatBtn" title="Clear conversation">Clear</button>
+                <button type="submit" class="btn-primary" id="sendBtn">Ask UniAssist →</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 2: ELIGIBILITY & FEE ESTIMATOR -->
+        <section class="view" id="view-estimator">
+          <div class="estimator-grid">
+            <div class="card form-card">
+              <div class="card-header-row">
+                <div>
+                  <h2>Eligibility & Fee Estimator</h2>
+                  <p>Check your program eligibility, tuition fee quota, and merit scholarship eligibility.</p>
+                </div>
+                <button type="button" class="btn-accent btn-sm" id="loadTc05Btn">Sample MCA Check</button>
+              </div>
+
+              <form id="estimatorForm" class="estimator-form">
+                <div class="form-group">
+                  <label>Select Academic Program</label>
+                  <div class="program-pills" id="programPills">
+                    <button type="button" class="prog-pill active" data-program="MCA">MCA</button>
+                    <button type="button" class="prog-pill" data-program="MBA">MBA</button>
+                    <button type="button" class="prog-pill" data-program="B.Tech">B.Tech</button>
+                    <button type="button" class="prog-pill" data-program="BCA">BCA</button>
+                    <button type="button" class="prog-pill" data-program="B.Sc.">B.Sc.</button>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="estPercentage">Qualifying Aggregate Marks (%)</label>
+                    <div class="range-input-wrap">
+                      <input type="range" id="estPercentageRange" min="35" max="100" step="0.5" value="86" />
+                      <input type="number" id="estPercentage" min="0" max="100" step="0.1" value="86" required />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="estCategory">Reservation / Quota Category</label>
+                    <select id="estCategory">
+                      <option value="General">General Merit</option>
+                      <option value="OBC">OBC (2A / 2B / 3A / 3B)</option>
+                      <option value="SC/ST">SC / ST (Karnataka)</option>
+                      <option value="Category-1">Category-1</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="estExam">Entrance Exam Pathway</label>
+                    <select id="estExam">
+                      <option value="PGCET">Karnataka PGCET (Govt Quota)</option>
+                      <option value="KMAT">KMAT</option>
+                      <option value="DSAT">DSAT (University Test)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="estRank">Entrance State Rank (Optional)</label>
+                    <input type="number" id="estRank" min="1" placeholder="e.g., 420 (for rank waiver)" />
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="estHostel">On-Campus Hostel & Mess Plan</label>
+                    <select id="estHostel">
+                      <option value="None">Day Scholar (No Hostel)</option>
+                      <option value="Triple Sharing Non-AC">Triple Sharing Non-AC (₹95,000/yr)</option>
+                      <option value="Twin Sharing Non-AC">Twin Sharing Non-AC (₹1,20,000/yr)</option>
+                      <option value="Twin Sharing AC">Twin Sharing AC (₹1,55,000/yr)</option>
+                      <option value="Single AC">Single Occupancy AC (₹1,95,000/yr)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group checkbox-group">
+                    <label>Mathematics Prerequisite</label>
+                    <label class="check-card">
+                      <input type="checkbox" id="estHasMath" checked />
+                      <span>Studied Mathematics at 10+2 or Graduation</span>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">Calculate Eligibility & Fee Breakdown</button>
+              </form>
+            </div>
+
+            <div class="card result-card" id="estimatorResultCard">
+              <div class="empty-state">Calculating assessment...</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 3: UNIVERSITY POLICIES (Read-Only for Students; Ingest unlocked for Admin) -->
+        <section class="view" id="view-corpus">
+          <div class="corpus-top-bar">
+            <div class="corpus-filters">
+              <input type="search" id="corpusSearchInput" placeholder="Search policies by keyword or section (e.g., PGCET, attendance, hostel, scholarship)..." />
+              <select id="corpusDeptFilter">
+                <option value="ALL">All Departments (6)</option>
+                <option value="ELIGIBILITY">ELIGIBILITY</option>
+                <option value="FEES">FEES</option>
+                <option value="SCHOLARSHIPS">SCHOLARSHIPS</option>
+                <option value="ADMISSIONS">ADMISSIONS</option>
+                <option value="HOSTEL">HOSTEL</option>
+                <option value="EXAMINATIONS">EXAMINATIONS</option>
+              </select>
+              <select id="corpusRoleFilter">
+                <option value="all">All Audiences</option>
+                <option value="applicant">Prospective Applicants</option>
+                <option value="student">Enrolled Students</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+            <button class="btn-primary admin-only hidden" id="toggleIngestDrawerBtn">+ Ingest Circular (.txt / .md / .pdf)</button>
+          </div>
+
+          <div class="ingest-panel hidden" id="ingestPanel">
+            <div class="card">
+              <div class="card-header-row">
+                <div>
+                  <h3>Admin Circular Ingestion</h3>
+                  <p>Upload a structured <code>.txt</code>, <code>.md</code>, or <code>.pdf</code> circular or paste a new section below to update the live knowledge base.</p>
+                </div>
+                <button class="btn-ghost btn-sm" id="closeIngestBtn">✕ Close</button>
+              </div>
+              <form id="ingestForm" class="ingest-form">
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label for="ingestPolicyId">Policy Section ID</label>
+                    <input type="text" id="ingestPolicyId" placeholder="e.g., POL-EXAM-04" />
+                  </div>
+                  <div class="form-group">
+                    <label for="ingestDept">Department</label>
+                    <select id="ingestDept">
+                      <option value="ADMISSIONS">ADMISSIONS</option>
+                      <option value="ELIGIBILITY">ELIGIBILITY</option>
+                      <option value="FEES">FEES</option>
+                      <option value="SCHOLARSHIPS">SCHOLARSHIPS</option>
+                      <option value="HOSTEL">HOSTEL</option>
+                      <option value="EXAMINATIONS">EXAMINATIONS</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="ingestRole">Target Stakeholder</label>
+                    <select id="ingestRole">
+                      <option value="both">both</option>
+                      <option value="applicant">applicant</option>
+                      <option value="student">student</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="ingestTitle">Section Heading / Title</label>
+                    <input type="text" id="ingestTitle" placeholder="e.g., Summer Internship & Placement Credit Policy" />
+                  </div>
+                  <div class="form-group">
+                    <label for="ingestFile">Or Upload Policy File (.txt, .md, .pdf)</label>
+                    <input type="file" id="ingestFile" accept=".txt,.md,.pdf" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="ingestRawText">Circular Policy Clauses</label>
+                  <textarea id="ingestRawText" rows="4" placeholder="Paste circular text (optional if file is uploaded)..."></textarea>
+                </div>
+                <div class="ingest-actions">
+                  <span id="ingestFeedback" class="feedback-text"></span>
+                  <button type="submit" class="btn-primary">Index & Re-Vectorize Corpus</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="corpus-grid" id="corpusGrid"></div>
+        </section>
+
+        <!-- VIEW 4: ESCALATION TICKETS (Admin Only) -->
+        <section class="view" id="view-tickets">
+          <div class="card">
+            <div class="card-header-row">
+              <div>
+                <h2>Tier-2 Counselor Escalation Queue</h2>
+                <p>Auto-generated tickets when query cosine similarity falls below <code>τ = 0.15</code> to prevent hallucination.</p>
+              </div>
+              <button class="btn-outline btn-sm" id="refreshTicketsBtn">↻ Refresh Queue</button>
+            </div>
+            <div id="ticketsContainer" class="tickets-list"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: BENCHMARK & DIAGNOSTICS (Admin Only) -->
+        <section class="view" id="view-benchmark">
+          <div class="benchmark-header card">
+            <div>
+              <h2>Live Evaluation & Diagnostics Lab</h2>
+              <p>Executes the curated 60-query retrieval benchmark, 10 adversarial out-of-scope queries, and Functional Test Cases (TC-01 to TC-05) directly on the live TF-IDF engine.</p>
+            </div>
+            <button class="btn-primary" id="runBenchmarkBtn">▶ Run Live Benchmark Suite</button>
+          </div>
+          <div id="benchmarkResults"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Policy Citation Evidence Modal -->
+  <div class="modal-backdrop hidden" id="policyModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="policy-id-pill" id="modalPolicyId">POL-ELIG-02</span>
+          <h3 id="modalPolicyTitle">Policy Title</h3>
+        </div>
+        <button class="btn-ghost btn-sm" id="closePolicyModalBtn">✕</button>
+      </div>
+      <div class="modal-meta" id="modalPolicyMeta"></div>
+      <pre class="modal-body-text" id="modalPolicyBody"></pre>
+    </div>
+  </div>
+
+  <!-- Staff / Admin Login Modal -->
+  <div class="modal-backdrop hidden" id="adminLoginModal">
+    <div class="modal-card modal-sm">
+      <div class="modal-header">
+        <div>
+          <h3>Staff & Admin Portal Login</h3>
+          <p class="modal-sub">Unlock Counselor Escalation Tickets, Circular Ingestion, Pipeline Telemetry, and Benchmark Diagnostics. (Default demo passcode: <code>admin123</code>)</p>
+        </div>
+        <button class="btn-ghost btn-sm" id="closeAdminLoginBtn">✕</button>
+      </div>
+      <form id="adminLoginForm">
+        <div class="form-group">
+          <label for="adminPasscodeInput">Staff Passcode</label>
+          <input type="password" id="adminPasscodeInput" placeholder="Enter staff passcode..." required />
+        </div>
+        <div id="adminLoginError" class="login-error hidden"></div>
+        <div class="modal-actions">
+          <button type="button" class="btn-ghost" id="cancelAdminLoginBtn">Cancel</button>
+          <button type="submit" class="btn-primary">Unlock Admin Console</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Gemini API Key Configuration Modal (Admin Only) -->
+  <div class="modal-backdrop hidden" id="apiModal">
+    <div class="modal-card modal-sm">
+      <div class="modal-header">
+        <div>
+          <h3>Google Gemini Flash Configuration</h3>
+          <p class="modal-sub">Optional: Enables online low-temperature (0.15) LLM synthesis. Without a key, UniAssist runs 100% locally via the Offline Deterministic Engine.</p>
+        </div>
+        <button class="btn-ghost btn-sm" id="closeApiModalBtn">✕</button>
+      </div>
+      <div class="form-group">
+        <label for="geminiApiKeyInput">Gemini API Key (Stored in browser session only)</label>
+        <input type="password" id="geminiApiKeyInput" placeholder="AIzaSy..." />
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn-ghost" id="clearApiKeyBtn">Remove Key</button>
+        <button type="button" class="btn-primary" id="saveApiKeyBtn">Save Key</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

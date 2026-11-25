@@ -1,0 +1,193 @@
+=== SECTION: POL-ELIG-01 | DEPT: ELIGIBILITY | ROLE: applicant | TITLE: B.Tech Undergraduate Engineering Eligibility Criteria ===
+Program: Bachelor of Technology (B.Tech - CSE, AI & ML, Data Science, ECE, Mechanical)
+Duration: 4 Years (8 Semesters)
+Academic Qualification:
+- Candidates must have passed 10+2 / PUC / Equivalent examination from a recognized board with Physics and Mathematics as compulsory subjects, along with Chemistry / Biotechnology / Biology / Computer Science / Electronics.
+- Minimum Percentage & Aggregate Marks: 45% minimum aggregate percentage in Physics, Mathematics, and the third optional subject for General Merit B.Tech CSE admission (40% aggregate for SC, ST, and Category-1 candidates of Karnataka).
+Accepted Entrance Examinations:
+- KCET (Karnataka Common Entrance Test), COMED-K UGET, JEE Main, or DSAT (Dayananda Sagar Admission Test).
+Lateral Entry (2nd Year / 3rd Semester):
+- Candidates with a 3-year Engineering Diploma with at least 45% aggregate (40% for SC/ST/Cat-1) and valid DCET rank are eligible for lateral entry B.Tech admission.
+
+=== SECTION: POL-ELIG-02 | DEPT: ELIGIBILITY | ROLE: applicant | TITLE: MCA Eligibility Criteria, Admission & Mathematics Bridge Rules ===
+Program: Master of Computer Applications (MCA)
+Duration: 2 Years (4 Semesters)
+MCA Admission & Academic Qualification:
+- Candidates seeking MCA admission must have passed a recognized Bachelor's Degree of minimum 3 years duration in BCA, B.Sc. (Computer Science / IT), B.E. / B.Tech in CSE/IT, or an equivalent degree.
+- Alternatively, graduates in B.Sc., B.Com., or B.A. are eligible for MCA admission provided they studied Mathematics at the 10+2 (Class 12) level OR at the Graduation level.
+- Minimum Aggregate Marks: At least 50% aggregate marks in the qualifying degree examination across all years/semesters for General Merit candidates (45% aggregate for SC, ST, and Category-1 candidates of Karnataka).
+Mathematics Bridge Course Provision:
+- Non-Mathematics graduates who studied Mathematics in Class 12 are directly eligible. Candidates who have neither Class 12 Mathematics nor Graduation Mathematics must complete a mandatory University Bridge Course in Discrete & Foundation Mathematics during Semester 1, subject to Dean's approval.
+Accepted Entrance Examinations for MCA:
+- Valid score/rank in Karnataka PGCET, KMAT, or DSAT (Dayananda Sagar Admission Test).
+
+=== SECTION: POL-ELIG-03 | DEPT: ELIGIBILITY | ROLE: applicant | TITLE: MBA, BCA & B.Sc. Program Eligibility Norms ===
+1. Master of Business Administration (MBA - 2 Years):
+- Recognized Bachelor's degree in any discipline (minimum 3 years) with at least 50% aggregate marks (45% for SC/ST/Cat-1 candidates).
+- Accepted Entrance Exams: PGCET, KMAT, CAT, MAT, XAT, CMAT, or DSAT.
+2. Bachelor of Computer Applications (BCA - 3 Years / 4 Years Honours):
+- Pass in 10+2 / PUC / Equivalent in any stream (Science, Commerce, or Arts) with minimum 45% aggregate marks (40% for SC/ST/Cat-1). Mathematics or Computer Science at 10+2 is preferred.
+3. Bachelor of Science (B.Sc. Biotechnology / Microbiology / Data Science - 3 Years):
+- Pass in 10+2 / PUC with Science stream (PCB or PCM) and minimum 45% aggregate marks (40% for SC/ST/Cat-1).
+- Selection is based on DSAT / 10+2 Merit Score.
+
+=== SECTION: POL-FEES-01 | DEPT: FEES | ROLE: applicant | TITLE: Annual Academic Tuition & Registration Fee Structure ===
+Academic Year 2026-27 Annual Fee Schedule (INR):
+1. MCA (Master of Computer Applications):
+- PGCET Government Quota Tuition Fee: INR 1,28,000 per year
+- University / Management / KMAT / DSAT Quota Tuition Fee: INR 2,10,000 per year
+2. MBA (Master of Business Administration):
+- PGCET Government Quota Tuition Fee: INR 1,35,000 per year
+- University / KMAT / CAT / DSAT Quota Tuition Fee: INR 2,95,000 per year
+3. B.Tech (CSE / AI & ML / Data Science):
+- KCET Government Quota Tuition Fee: INR 1,07,000 per year
+- COMED-K Quota Tuition Fee: INR 2,68,000 per year
+- University / DSAT Direct Quota Tuition Fee: INR 3,85,000 per year
+4. BCA (Bachelor of Computer Applications):
+- Standard University Tuition Fee: INR 1,45,000 per year
+5. B.Sc. (Data Science / Biotechnology):
+- Standard University Tuition Fee: INR 1,15,000 per year
+One-Time & Statutory Charges (All Programs):
+- Admission Processing & Registration Fee (One-Time, Non-Refundable): INR 10,000
+- Annual University Examination & Library Fee: INR 12,000 per year
+- Caution Deposit (Refundable at graduation): INR 5,000
+
+=== SECTION: POL-FEES-02 | DEPT: FEES | ROLE: both | TITLE: Hostel Fee Structure, Accommodation & Mess Charges ===
+On-Campus Residential Hostel Fee Structure & Dining Schedule (Annual, INR):
+- Triple Sharing Non-AC Room (Boys / Girls): INR 95,000 per year (includes Lodging INR 55,000 + Veg/Non-Veg Mess Dining INR 40,000)
+- Twin Sharing Non-AC Room (Boys / Girls): INR 1,20,000 per year (includes Lodging INR 80,000 + Mess Dining INR 40,000)
+- Twin Sharing AC Room with Attached Bath: INR 1,55,000 per year (includes Lodging INR 1,15,000 + Mess Dining INR 40,000)
+- Single Occupancy AC Room (Subject to Availability): INR 1,95,000 per year (includes Lodging INR 1,55,000 + Mess Dining INR 40,000)
+Hostel Deposits & Utilities:
+- Refundable Hostel Security Deposit (One-Time): INR 15,000
+- Laundry, Wi-Fi (100 Mbps Campus Fiber), and 24x7 Medical Infirmary access are included in the annual lodging fee.
+- Hostel fees must be paid in full prior to room allotment before August 15 each academic year.
+
+=== SECTION: POL-FEES-03 | DEPT: FEES | ROLE: both | TITLE: UGC Fee Refund, Withdrawal & Late Fee Policy ===
+In accordance with University Grants Commission (UGC) Fee Refund Guidelines:
+- Withdrawal 15 days or more before the formally notified last date of admission: 100% refund of tuition fee (less max INR 1,000 processing fee).
+- Withdrawal less than 15 days before the last date of admission: 90% refund of tuition fee.
+- Withdrawal 15 days or less after the last date of admission: 80% refund of tuition fee.
+- Withdrawal 16 to 30 days after the last date of admission: 50% refund of tuition fee.
+- Withdrawal more than 30 days after the last date of admission: 0% refund (Zero tuition refund; refundable caution deposit of INR 5,000 is still returned upon No-Dues clearance).
+Semester Tuition Installment & Late Fine Rules (Enrolled Students):
+- Odd semester fees are due by July 31; Even semester fees are due by January 15.
+- Late payment attracts a fine of INR 100 per day up to 15 days, and INR 2,500 flat penalty thereafter.
+
+=== SECTION: POL-SCHOL-01 | DEPT: SCHOLARSHIPS | ROLE: applicant | TITLE: University Merit Scholarship Slabs & Entrance Rank Waivers ===
+Dayananda Sagar University (DSU) awards Merit Scholarships on annual tuition fees for first-year entrants based on qualifying aggregate marks and entrance exam performance:
+Qualifying Academic Percentage Slabs (10+2 for UG / Graduation for PG):
+- Slab A (95.0% and above): 50% Tuition Fee Waiver
+- Slab B (90.0% to 94.99%): 25% Tuition Fee Waiver
+- Slab C (85.0% to 89.99%): 15% Tuition Fee Waiver
+- Below 85.0%: Standard tuition fee applies (eligible for government/category schemes if applicable).
+Entrance Rank Excellence Waivers:
+- KCET / PGCET State Rank <= 500: 50% Tuition Fee Waiver
+- KCET / PGCET State Rank 501 to 2,000: 25% Tuition Fee Waiver
+Renewal Condition for Subsequent Years:
+- To retain a merit scholarship in Year 2 onwards, the student must maintain a minimum CGPA of 8.0 with zero active backlogs and at least 85% attendance. Only the single highest applicable waiver can be claimed.
+
+=== SECTION: POL-SCHOL-02 | DEPT: SCHOLARSHIPS | ROLE: both | TITLE: Government, SSP, NSP & Category Fee Concessions ===
+Government Scholarship Portals Facilitated by University Scholarship Cell:
+- Karnataka State Scholarship Portal (SSP): Post-Matric Scholarships for SC, ST, Category-1, 2A, 2B, 3A, and 3B students whose annual family income falls below statutory state thresholds (INR 2.5 Lakhs for SC/ST; INR 1.0 Lakh to 2.5 Lakhs for OBC/EWS).
+- National Scholarship Portal (NSP): Central Sector Schemes, AICTE Pragati (for female technical students), AICTE Saksham (for differently-abled students), and Minority Post-Matric Scholarships.
+- Karnataka Vidyasiri Food & Accommodation Assistance: Available to eligible OBC/Minority hostel and day-scholar students registered on SSP.
+Application Deadlines & Required Documents:
+- Students must submit Aadhaar-seeded bank details, valid Caste & Income Certificate (RD number), Previous Year Marks Card, and University Bonafide Certificate to the Scholarship Desk before October 31 each year.
+
+=== SECTION: POL-SCHOL-03 | DEPT: SCHOLARSHIPS | ROLE: both | TITLE: Sports, Defence, Sibling & Alumni Financial Assistance ===
+Special Category Institutional Concessions:
+1. Sports Excellence Concession:
+- International / National medalists (AIU / Khelo India / Olympic Association): Up to 50% tuition fee waiver upon Sports Director verification.
+- State-level podium finishers: 20% tuition fee waiver.
+2. Defence & Paramilitary Personnel Ward Concession:
+- Wards of serving/retired Armed Forces, CRPF, BSF, and Martyr personnel receive a 15% annual tuition concession upon submission of Service Certificate / Ex-Serviceman ID.
+3. Sibling & DSU Alumni Concession:
+- Siblings of currently enrolled DSU students or alumni progressing from UG (BCA/B.Tech/B.Sc.) to PG (MCA/MBA) receive a 10% loyalty tuition concession in Year 1.
+- Note: Concessions cannot be combined with Merit Scholarship Slabs; the higher single benefit applies.
+
+=== SECTION: POL-ADM-01 | DEPT: ADMISSIONS | ROLE: applicant | TITLE: Admission Procedure, Counseling & Seat Allotment Workflow ===
+Step-by-Step Admission & Counseling Process:
+Step 1 - Online Application: Register on the University Admissions Portal (admissions.dsu.edu.in), fill academic profile, select program preference, and pay the INR 1,000 application fee.
+Step 2 - Entrance Exam / DSAT: Appear for DSAT (Dayananda Sagar Admission Test) or submit valid national/state entrance scores (PGCET, KMAT, KCET, COMED-K, JEE Main, CAT, MAT).
+Step 3 - Counseling & Provisional Seat Allotment: Shortlisted applicants attend online/campus counseling and receive a Provisional Allotment Letter.
+Step 4 - Fee Remittance & Seat Lock: Pay the first-year tuition installment + INR 10,000 registration fee within 7 working days of allotment to confirm the seat.
+Step 5 - Physical Document Verification & Enrollment: Report to the Admissions Office (Kudlu Gate Campus) before orientation to receive your University Roll Number / USN.
+
+=== SECTION: POL-ADM-02 | DEPT: ADMISSIONS | ROLE: applicant | TITLE: Mandatory Document Verification Checklist ===
+Applicants must bring Original Documents along with 2 sets of self-attested photocopies during physical verification:
+1. Class 10 (SSLC) Original Marks Card (Proof of Date of Birth)
+2. Class 12 (PUC / Equivalent) Original Marks Card
+3. All Semester/Year Graduation Marks Cards & Provisional Degree Certificate (PDC) / Convocation Certificate (mandatory for MCA & MBA)
+4. Valid Entrance Exam Rank Card / Score Card (PGCET / KMAT / KCET / COMED-K / DSAT)
+5. Transfer Certificate (TC) from the last attended institution
+6. Migration Certificate (mandatory for non-Karnataka / out-of-state university graduates)
+7. Study & Conduct Certificate (minimum 7 years Karnataka study certificate if claiming KCET/PGCET Karnataka quota)
+8. Valid Caste & Income Certificate (for SC/ST/OBC/Cat-1 reservation or scholarship claims)
+9. Aadhaar Card copy & 6 recent passport-size color photographs
+10. Anti-Ragging Online Undertaking Affidavit printout (ugc.ac.in / antiragging.in).
+
+=== SECTION: POL-ADM-03 | DEPT: ADMISSIONS | ROLE: applicant | TITLE: Admission Deadlines, Orientation & Lateral Entry Rules ===
+Key Academic Admission Timeline (2026-27 Cycle):
+- Phase 1 DSAT & Early Merit Applications Close: May 31, 2026
+- Phase 2 Direct & Entrance Counseling Window: June 15 – August 20, 2026
+- PGCET / KCET Government Quota Reporting Window: Within 5 days of KEA Final Round Allotment
+- Commencement of Classes & Orientation Week: September 1, 2026
+- Final Cut-Off Date for Admissions & Document Submission: September 30, 2026
+Provisional Admission Rule:
+- Final-year undergraduate students awaiting 6th/8th semester results may apply provisionally for MCA/MBA, provided they submit final passing marks cards showing >= 50% aggregate (45% reserved) by October 15, 2026, failing which admission stands cancelled.
+
+=== SECTION: POL-HOSTEL-01 | DEPT: HOSTEL | ROLE: both | TITLE: Hostel Allotment Rules, Curfew Timings & Discipline ===
+On-Campus Hostel Allotment & Residential Regulations:
+- Allotment Priority: First-come, first-served basis for outstation students upon full payment of annual hostel fee and INR 15,000 security deposit.
+- Biometric Attendance & Curfew Timings: All hostel residents must mark biometric attendance daily before 9:30 PM (Monday–Saturday) and 10:00 PM (Sundays/Holidays).
+- Night Out / Home Leave Pass: Residents must apply via the Student Hostel Portal at least 24 hours in advance; automated SMS/WhatsApp approval from registered parents is mandatory before gate pass issuance.
+- Prohibited Items & Conduct: Possession or consumption of alcohol, tobacco, narcotics, induction cookers, or unauthorized electrical heaters inside hostel rooms is strictly prohibited and invites immediate expulsion.
+- Zero-Tolerance Anti-Ragging Policy: Any form of ragging attracts immediate suspension and FIR under Karnataka Education Act & UGC Anti-Ragging Regulations.
+
+=== SECTION: POL-HOSTEL-02 | DEPT: HOSTEL | ROLE: both | TITLE: Campus Transport, Library, Wi-Fi & Medical Facilities ===
+Student Campus Facilities & Support Services:
+1. Campus Bus & Shuttle Service:
+- Dedicated AC/Non-AC university bus routes operate across major Bengaluru corridors (Silk Board, Electronic City, BTM, Koramangala, Jayanagar, Banashankari, Indiranagar, Whitefield, Yelahanka).
+- Annual Campus Transport Fee: INR 28,000 to INR 36,000 per year depending on route zone.
+2. Central Library & Digital Knowledge Center:
+- Open 8:00 AM to 9:00 PM on weekdays and 9:00 AM to 5:00 PM on Saturdays; extended to 11:00 PM during SEE examination weeks.
+- Borrowing Limit: 5 books for 14 days for UG students; 7 books for 21 days for PG (MCA/MBA) students; full access to IEEE, Springer, and ACM Digital Library via campus Wi-Fi.
+3. Medical & Health Center:
+- 24x7 Campus Infirmary with resident nurse, visiting physician (10:00 AM – 4:00 PM), and emergency ambulance tie-up with Sagar Hospitals (Kumarswamy Layout / Jayanagar).
+
+=== SECTION: POL-HOSTEL-03 | DEPT: HOSTEL | ROLE: student | TITLE: Hostel Room Change, Vacating & Security Deposit Refund ===
+Hostel Transfer, Vacating & Deposit Clearance Rules (Enrolled Residents):
+- Room Change Requests: Allowed only during the first 15 days of a semester or on certified medical grounds, subject to Chief Warden approval and room availability.
+- Mid-Year Hostel Withdrawal: Hostel fees are annual; no lodging refund is granted if a student vacates mid-semester. Unused mess charges may be refunded on a pro-rata basis only for long medical leave exceeding 30 continuous days.
+- Security Deposit Refund: The INR 15,000 refundable hostel security deposit is credited via NEFT within 21 working days after submitting the Hostel No-Dues Clearance Form, room key handover, and inspection for zero property damage.
+
+=== SECTION: POL-EXAM-01 | DEPT: EXAMINATIONS | ROLE: student | TITLE: SEE Exam Schedule, Hall Ticket & Attendance Shortage Rules ===
+Semester End Examination (SEE) & Attendance Regulations (Enrolled Students):
+- SEE Exam Schedule Release: Official Controller of Examinations (CoE) timetable is published on the Student ERP Portal 21 days prior to the commencement of theory examinations (typically November for Odd Semester and April/May for Even Semester).
+- Minimum Attendance Requirement:
+  * 85% attendance per course is mandatory to appear in SEE without restriction.
+  * 75% to 84% attendance may be condoned ONLY on verified medical hospitalization or university-represented sports/NCC grounds upon submitting supporting certificates + INR 1,500 condonation fee per course to the Dean.
+  * Below 75% attendance results in automatic detention (NSAR - Not Satisfied Attendance Requirement) in that course; the student must re-register when offered next.
+- Exam Hall Ticket Generation:
+  * Hall tickets are unlocked on the ERP Portal 5 days before the exam ONLY after clearing 100% tuition dues, exam registration fee, and meeting the attendance threshold.
+
+=== SECTION: POL-EXAM-02 | DEPT: EXAMINATIONS | ROLE: student | TITLE: CIE Internal Assessment, CGPA Grading & Passing Standards ===
+Evaluation Pattern & Academic Progression Standards:
+- Assessment Split: Every theory course is evaluated out of 100 marks comprising 50% Continuous Internal Evaluation (CIE: 2 Mid-Term Tests, Quizzes, Assignments/Labs) and 50% Semester End Examination (SEE).
+- Minimum Passing Criteria:
+  * Minimum 40% marks in CIE (20/50) is required to become eligible for SEE.
+  * Minimum 35% marks in SEE (18/50) and 40% overall aggregate (40/100) is required to pass a course.
+- 10-Point Relative/Absolute CGPA Grading Scale:
+  * O (90-100): 10 pts | A+ (80-89): 9 pts | A (70-79): 8 pts | B+ (60-69): 7 pts | B (55-59): 6 pts | C (50-54): 5 pts | P (40-49): 4 pts | F (<40): 0 pts.
+- Revaluation & Makeup Exam: Students may apply for answer-script photocopy and revaluation within 5 working days of result declaration (INR 600 per paper for photocopy, INR 1,000 for revaluation).
+
+=== SECTION: POL-EXAM-03 | DEPT: EXAMINATIONS | ROLE: student | TITLE: Bonafide Certificates, Transcripts, No-Dues & Convocation ===
+Student Academic Certificates & Registrar Services:
+1. Bonafide / Study Certificate & Fee Structure Letter (for Bank Loan / Visa / Scholarship):
+- Apply online via Student ERP -> Registrar Services -> Certificate Request.
+- Processing Time: 2 working days; Fee: Free for 1st copy per semester (INR 100 for duplicate/extra copies).
+2. Official Transcripts & Provisional Degree Certificate (PDC):
+- Processing Time: 7 working days after final semester result publication; Official Transcript Set Fee: INR 1,000.
+3. No-Dues Clearance Procedure (Graduating / Transferring Students):
+- Digital No-Dues clearance must be approved sequentially by: (1) Department Lab & Project Guide, (2) Central Library, (3) Hostel Warden (if resident), (4) Accounts Section, and (5) Registrar Office before Transfer Certificate (TC), Caution Deposit (INR 5,000), or Degree Certificate is released.
